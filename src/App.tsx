@@ -159,6 +159,7 @@ const ZoomableImage = ({ src, alt }: { src: string; alt: string }) => {
 function App() {
   const [activeSection, setActiveSection] = useState('summary');
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [lightbox, setLightbox] = useState<{ key: string; scale: number } | null>(null);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);

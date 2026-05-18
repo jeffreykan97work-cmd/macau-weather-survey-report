@@ -119,7 +119,7 @@ const suggestionsData = [
 
 const ZoomableImage = ({ src, alt }: { src: string; alt: string }) => {
   const [scale, setScale] = useState(1);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   
   const handleWheel = useCallback((e: React.WheelEvent) => {
     e.preventDefault();
@@ -134,19 +134,19 @@ const ZoomableImage = ({ src, alt }: { src: string; alt: string }) => {
   
   return (
     <div 
-      className="overflow-auto flex items-center justify-center" 
-      style={{ maxHeight: '75vh' }}
+      ref={containerRef}
+      className="overflow-auto flex items-start justify-center"
+      style={{ maxHeight: '80vh', minHeight: '200px' }}
     >
       <img
-        ref={imgRef}
         src={src}
         alt={alt}
-        className="transition-transform duration-150 cursor-zoom-in"
+        className="cursor-zoom-in"
         style={{ 
-          transform: `scale(${scale})`,
-          transformOrigin: 'center center',
-          maxWidth: '100%',
-          height: 'auto'
+          width: `${100 * scale}%`,
+          maxWidth: 'none',
+          height: 'auto',
+          transition: 'width 150ms ease-out'
         }}
         onWheel={handleWheel}
         onClick={resetZoom}
@@ -438,7 +438,7 @@ function App() {
                 </Card>
               </div>
             </DialogTrigger>
-            <DialogContent className="max-w-4xl">
+            <DialogContent className="max-w-[95vw]">
               <DialogHeader>
                 <DialogTitle>用戶輪廓分析</DialogTitle>
               </DialogHeader>
@@ -484,7 +484,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl">
+              <DialogContent className="max-w-[95vw]">
                 <DialogHeader><DialogTitle>滿意度平均分數</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart1_satisfaction_scores.png"} alt="滿意度分數" />
               </DialogContent>
@@ -504,7 +504,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl">
+              <DialogContent className="max-w-[95vw]">
                 <DialogHeader><DialogTitle>交叉分析熱力圖</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart5_cross_analysis.png"} alt="交叉分析" />
               </DialogContent>
@@ -592,7 +592,7 @@ function App() {
                 </Card>
               </div>
             </DialogTrigger>
-            <DialogContent className="max-w-5xl">
+            <DialogContent className="max-w-[95vw]">
               <DialogHeader><DialogTitle>用戶行為與認知分析</DialogTitle></DialogHeader>
               <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" />
             </DialogContent>
@@ -675,7 +675,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-5xl">
+              <DialogContent className="max-w-[95vw]">
                 <DialogHeader><DialogTitle>問題回報與資訊渠道</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" />
               </DialogContent>

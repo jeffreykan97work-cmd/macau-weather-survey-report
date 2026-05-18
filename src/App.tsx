@@ -438,7 +438,7 @@ function App() {
                 </Card>
               </div>
             </DialogTrigger>
-            <DialogContent className="max-w-[95vw]">
+            <DialogContent className="sm:max-w-[95vw]">
               <DialogHeader>
                 <DialogTitle>用戶輪廓分析</DialogTitle>
               </DialogHeader>
@@ -484,7 +484,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[95vw]">
+              <DialogContent className="sm:max-w-[95vw]">
                 <DialogHeader><DialogTitle>滿意度平均分數</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart1_satisfaction_scores.png"} alt="滿意度分數" />
               </DialogContent>
@@ -504,7 +504,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[95vw]">
+              <DialogContent className="sm:max-w-[95vw]">
                 <DialogHeader><DialogTitle>交叉分析熱力圖</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart5_cross_analysis.png"} alt="交叉分析" />
               </DialogContent>
@@ -592,7 +592,7 @@ function App() {
                 </Card>
               </div>
             </DialogTrigger>
-            <DialogContent className="max-w-[95vw]">
+            <DialogContent className="sm:max-w-[95vw]">
               <DialogHeader><DialogTitle>用戶行為與認知分析</DialogTitle></DialogHeader>
               <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" />
             </DialogContent>
@@ -675,7 +675,7 @@ function App() {
                   </Card>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[95vw]">
+              <DialogContent className="sm:max-w-[95vw]">
                 <DialogHeader><DialogTitle>問題回報與資訊渠道</DialogTitle></DialogHeader>
                 <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" />
               </DialogContent>

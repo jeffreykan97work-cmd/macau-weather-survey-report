@@ -427,7 +427,7 @@ function App() {
                   </CardHeader>
                   <CardContent className="p-0">
                     <img 
-                      src="/charts/chart2_user_profile.png" 
+                      src={import.meta.env.BASE_URL + "charts/chart2_user_profile.png"} 
                       alt="用戶輪廓分析" 
                       className="w-full h-auto"
                     />
@@ -442,7 +442,7 @@ function App() {
               <DialogHeader>
                 <DialogTitle>用戶輪廓分析</DialogTitle>
               </DialogHeader>
-              <ZoomableImage src="/charts/chart2_user_profile.png" alt="用戶輪廓分析" />
+              <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart2_user_profile.png"} alt="用戶輪廓分析" />
             </DialogContent>
           </Dialog>
         </section>
@@ -478,7 +478,7 @@ function App() {
                       <CardTitle className="text-lg">滿意度平均分數</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0">
-                      <img src="/charts/chart1_satisfaction_scores.png" alt="滿意度分數" className="w-full h-auto" />
+                      <img src={import.meta.env.BASE_URL + "charts/chart1_satisfaction_scores.png"} alt="滿意度分數" className="w-full h-auto" />
                       <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
                     </CardContent>
                   </Card>
@@ -486,7 +486,7 @@ function App() {
               </DialogTrigger>
               <DialogContent className="max-w-4xl">
                 <DialogHeader><DialogTitle>滿意度平均分數</DialogTitle></DialogHeader>
-                <ZoomableImage src="/charts/chart1_satisfaction_scores.png" alt="滿意度分數" />
+                <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart1_satisfaction_scores.png"} alt="滿意度分數" />
               </DialogContent>
             </Dialog>
 
@@ -498,7 +498,7 @@ function App() {
                       <CardTitle className="text-lg">交叉分析熱力圖</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0">
-                      <img src="/charts/chart5_cross_analysis.png" alt="交叉分析" className="w-full h-auto" />
+                      <img src={import.meta.env.BASE_URL + "charts/chart5_cross_analysis.png"} alt="交叉分析" className="w-full h-auto" />
                       <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
                     </CardContent>
                   </Card>
@@ -506,7 +506,7 @@ function App() {
               </DialogTrigger>
               <DialogContent className="max-w-4xl">
                 <DialogHeader><DialogTitle>交叉分析熱力圖</DialogTitle></DialogHeader>
-                <ZoomableImage src="/charts/chart5_cross_analysis.png" alt="交叉分析" />
+                <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart5_cross_analysis.png"} alt="交叉分析" />
               </DialogContent>
             </Dialog>
           </div>
@@ -586,7 +586,7 @@ function App() {
                     <CardTitle className="text-lg">最常查看資訊與APP優點</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <img src="/charts/chart3_behavior_advantages.png" alt="行為與認知" className="w-full h-auto" />
+                    <img src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" className="w-full h-auto" />
                     <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
                   </CardContent>
                 </Card>
@@ -594,7 +594,7 @@ function App() {
             </DialogTrigger>
             <DialogContent className="max-w-5xl">
               <DialogHeader><DialogTitle>用戶行為與認知分析</DialogTitle></DialogHeader>
-              <ZoomableImage src="/charts/chart3_behavior_advantages.png" alt="行為與認知" />
+              <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" />
             </DialogContent>
           </Dialog>
 
@@ -669,7 +669,7 @@ function App() {
                       <CardTitle className="text-lg">問題回報與資訊渠道</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0">
-                      <img src="/charts/chart4_problems_channels.png" alt="問題與渠道" className="w-full h-auto" />
+                      <img src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" className="w-full h-auto" />
                       <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
                     </CardContent>
                   </Card>
@@ -677,7 +677,7 @@ function App() {
               </DialogTrigger>
               <DialogContent className="max-w-5xl">
                 <DialogHeader><DialogTitle>問題回報與資訊渠道</DialogTitle></DialogHeader>
-                <ZoomableImage src="/charts/chart4_problems_channels.png" alt="問題與渠道" />
+                <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" />
               </DialogContent>
             </Dialog>
 

@@ -159,7 +159,6 @@ const ZoomableImage = ({ src, alt }: { src: string; alt: string }) => {
 function App() {
   const [activeSection, setActiveSection] = useState('summary');
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [lightbox, setLightbox] = useState<{ key: string; scale: number } | null>(null);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -457,6 +456,18 @@ function App() {
             <h2 className="text-2xl font-bold text-slate-800">滿意度量化分析</h2>
           </div>
 
+          {/* 資料來源：滿意度評分 */}
+          <details className="mb-4 group">
+            <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+              📋 資料來源 — 點擊展開
+            </summary>
+            <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+              <p><strong>問題：</strong>請對「澳門天氣」APP在以下各方面的表現進行評分。</p>
+              <p><strong>選項：</strong>1 分（非常不滿意）至 5 分（非常滿意），五級量表。</p>
+              <p><strong>有效樣本：</strong>618 份</p>
+            </div>
+          </details>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {satisfactionData.map((item) => (
               <Card key={item.dimension} className="relative overflow-hidden">
@@ -517,6 +528,18 @@ function App() {
               <CardTitle className="text-lg">交叉分析摘要</CardTitle>
             </CardHeader>
             <CardContent>
+              {/* 資料來源：交叉分析 */}
+              <details className="mb-4 group">
+                <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+                  📋 資料來源 — 點擊展開
+                </summary>
+                <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+                  <p><strong>年齡：</strong>「請問您的年齡是？」— 18歲以下 / 18-30歲 / 31-50歲 / 51歲以上</p>
+                  <p><strong>使用頻率：</strong>「您使用「澳門天氣」APP的頻率是？」— 每天多次 / 每天一次 / 每週幾次 / 偶爾使用 / 第一次使用</p>
+                  <p><strong>交叉維度：</strong>以上兩題分別與總體滿意度（4項平均）進行交叉分析</p>
+                  <p><strong>有效樣本：</strong>618 份</p>
+                </div>
+              </details>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-medium text-slate-700 mb-3 flex items-center gap-2">
@@ -608,6 +631,16 @@ function App() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
+                {/* 資料來源：資訊查看偏好 */}
+                <details className="mb-3 group">
+                  <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+                    📋 資料來源 — 點擊展開
+                  </summary>
+                  <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+                    <p><strong>問題：</strong>您最常使用「澳門天氣」APP查看以下哪些資訊？（可多選）</p>
+                    <p><strong>有效樣本：</strong>618 份</p>
+                  </div>
+                </details>
                 <div className="space-y-3">
                   {infoTypesData.map((item) => (
                     <div key={item.type} className="flex items-center gap-3">
@@ -633,6 +666,16 @@ function App() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
+                {/* 資料來源：APP認知優點 */}
+                <details className="mb-3 group">
+                  <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+                    📋 資料來源 — 點擊展開
+                  </summary>
+                  <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+                    <p><strong>問題：</strong>您認為「澳門天氣」APP有哪些優點？（可多選）</p>
+                    <p><strong>有效樣本：</strong>618 份</p>
+                  </div>
+                </details>
                 <div className="space-y-3">
                   {advantagesData.map((item) => (
                     <div key={item.advantage} className="flex items-center gap-3">
@@ -687,6 +730,17 @@ function App() {
                 <CardTitle className="text-lg">問題嚴重程度評估</CardTitle>
               </CardHeader>
               <CardContent>
+                {/* 資料來源：系統問題 */}
+                <details className="mb-3 group">
+                  <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+                    📋 資料來源 — 點擊展開
+                  </summary>
+                  <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+                    <p><strong>問題：</strong>在使用「澳門天氣」APP時，您是否遇到過以下問題？（可多選）</p>
+                    <p><strong>選項：</strong>資訊更新延遲、定位不準確、字體太小或難以閱讀、找不到想要的功能、閃退或卡頓、推送通知不及時或過多、沒有遇到問題</p>
+                    <p><strong>有效樣本：</strong>618 份 | 註：同時勾選具體問題及「沒有遇到問題」的10份已篩除</p>
+                  </div>
+                </details>
                 <div className="space-y-4">
                   {problemsData.map((item) => (
                     <div key={item.problem} className="relative">

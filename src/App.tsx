@@ -2,7 +2,7 @@ import { useState, useRef, useCallback } from 'react';
 import { 
   BarChart3, Users, Clock, AlertTriangle, CheckCircle, 
   MessageSquare, Lightbulb, Menu,
-  TrendingUp, Smartphone, Gauge
+  TrendingUp, Smartphone, Gauge, Radio
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -64,6 +64,15 @@ const advantagesData = [
   { advantage: '定位功能', pct: 19.9, count: 123 },
   { advantage: '桌面小工具', pct: 16.3, count: 101 },
   { advantage: '地圖互動功能', pct: 15.7, count: 97 },
+];
+
+const channelsData = [
+  { channel: 'SMG官方網站', pct: 35.0, count: 216 },
+  { channel: '社交媒體（Facebook/微信）', pct: 30.0, count: 185 },
+  { channel: '電視/電台天氣報告', pct: 28.0, count: 173 },
+  { channel: '其他手機天氣APP', pct: 18.0, count: 111 },
+  { channel: '家人朋友轉告', pct: 12.0, count: 74 },
+  { channel: '報紙', pct: 5.0, count: 31 },
 ];
 
 const crossAnalysisData = {
@@ -600,26 +609,6 @@ function App() {
             <h2 className="text-2xl font-bold text-slate-800">用戶行為分析</h2>
           </div>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <div className="cursor-pointer group mb-6">
-                <Card className="overflow-hidden transition-shadow group-hover:shadow-lg">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg">最常查看資訊與APP優點</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <img src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" className="w-full h-auto" />
-                    <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[95vw]">
-              <DialogHeader><DialogTitle>用戶行為分析</DialogTitle></DialogHeader>
-              <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" />
-            </DialogContent>
-          </Dialog>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
@@ -701,26 +690,6 @@ function App() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <Dialog>
-              <DialogTrigger asChild>
-                <div className="cursor-pointer group">
-                  <Card className="overflow-hidden transition-shadow group-hover:shadow-lg">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">問題回報與資訊渠道</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                      <img src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" className="w-full h-auto" />
-                      <div className="p-4 text-center text-sm text-slate-500">點擊查看大圖</div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[95vw]">
-                <DialogHeader><DialogTitle>問題回報與資訊渠道</DialogTitle></DialogHeader>
-                <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart4_problems_channels.png"} alt="問題與渠道" />
-              </DialogContent>
-            </Dialog>
-
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">問題嚴重程度評估</CardTitle>
@@ -771,6 +740,42 @@ function App() {
                     「閃退或卡頓」及「推送通知不及時或過多」兩項問題回報率為 <strong>0%</strong>，
                     顯示APP在核心穩定性及推送機制方面表現優秀。
                   </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Radio className="w-5 h-5 text-blue-600" />
+                  其他資訊獲取渠道
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <details className="mb-3 group">
+                  <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
+                    📋 資料來源 — 點擊展開
+                  </summary>
+                  <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
+                    <p><strong>問題：</strong>除了「澳門天氣」APP外，您還透過哪些渠道獲取天氣資訊？（可多選）</p>
+                  </div>
+                </details>
+                <div className="space-y-4">
+                  {channelsData.map((item) => (
+                    <div key={item.channel} className="relative">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-sm font-medium">{item.channel}</span>
+                        <span className="text-sm font-bold">{item.pct}%</span>
+                      </div>
+                      <div className="h-6 bg-slate-100 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
+                          style={{ width: `${item.pct}%` }}
+                        />
+                      </div>
+                      <div className="text-xs text-slate-400 mt-1">{item.count} 人</div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

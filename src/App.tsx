@@ -277,58 +277,6 @@ function App() {
               </div>
             </div>
           </div>
-
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  核心優勢
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 shrink-0" />
-                    <span><strong>介面美觀易用</strong>（4.22分）：88.9%用戶給予4分或以上</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 shrink-0" />
-                    <span><strong>預警及時有效</strong>（4.14分）：43.7%用戶認同此優點</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 shrink-0" />
-                    <span><strong>高用戶黏性</strong>：62.0%用戶每日使用APP</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-amber-600" />
-                  待改進問題
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
-                    <span><strong>資訊更新延遲</strong>：21.8%用戶反映，為最突出痛點</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
-                    <span><strong>定位不準確</strong>：14.7%用戶受影響</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
-                    <span><strong>字體可讀性</strong>：12.7%用戶反映字體太小</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
         </section>
 
         {/* Basic Info */}

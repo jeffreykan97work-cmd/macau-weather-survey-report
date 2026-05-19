@@ -191,7 +191,7 @@ function App() {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-slate-800 leading-tight">「澳門天氣」APP</h1>
-                <p className="text-xs text-slate-500">用戶意見調查分析報告</p>
+                <p className="text-xs text-slate-500">用戶意見調查分析報告（截至2026年5月19日數據）</p>
               </div>
             </div>
             
@@ -473,6 +473,7 @@ function App() {
             </summary>
             <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
               <p><strong>問題：</strong>請對「澳門天氣」APP在以下各方面的表現進行評分。</p>
+              <p><strong>評分維度：</strong>介面美觀 (平均4.23) / APP易用程度 (平均4.18) / 運行速度與穩定性 (平均4.13) / 推送通知及時性 (平均4.15)</p>
               <p><strong>選項：</strong>1 分（非常不滿意）至 5 分（非常滿意），五級量表。</p>
             </div>
           </details>
@@ -543,8 +544,8 @@ function App() {
                   📋 資料來源 — 點擊展開
                 </summary>
                 <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
-                  <p><strong>年齡：</strong>「請問您的年齡是？」— 18歲以下 / 18-30歲 / 31-50歲 / 51歲以上</p>
-                  <p><strong>使用頻率：</strong>「您使用「澳門天氣」APP的頻率是？」— 每天多次 / 每天一次 / 每週幾次 / 偶爾使用 / 第一次使用</p>
+                  <p><strong>年齡：</strong>「請問您的年齡是？」— 18歲以下(3.7%) / 18-30歲(38.2%) / 31-50歲(42.7%) / 51歲以上(15.4%)</p>
+                  <p><strong>使用頻率：</strong>「您使用「澳門天氣」APP的頻率是？」— 每天多次(34.0%) / 每天一次(28.0%) / 每週幾次(10.7%) / 偶爾使用(20.1%) / 第一次使用(7.3%)</p>
                   <p><strong>交叉維度：</strong>以上兩題分別與總體滿意度（4項平均）進行交叉分析</p>
                     </div>
               </details>
@@ -626,6 +627,7 @@ function App() {
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>您最常使用「澳門天氣」APP查看以下哪些資訊？（可多選）</p>
+                    <p><strong>選項分佈：</strong>實時天氣狀況 (84.6%) / 天氣預報 (73.1%) / 惡劣天氣資訊 (65.5%) / 特別天氣提示 (49.4%) / 空氣質量指數 (17.5%) / 天氣雷達/衛星 (17.0%)</p>
                         </div>
                 </details>
                 <div className="space-y-3">
@@ -660,6 +662,7 @@ function App() {
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>您認為「澳門天氣」APP有哪些優點？（可多選）</p>
+                    <p><strong>選項分佈：</strong>介面美觀操作簡單 (69.6%) / 警告通知發送迅速 (43.2%) / 定位功能 (19.9%) / 桌面小工具 (16.3%) / 地圖互動功能 (15.7%)</p>
                         </div>
                 </details>
                 <div className="space-y-3">
@@ -703,7 +706,7 @@ function App() {
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>在使用「澳門天氣」APP時，您是否遇到過以下問題？（可多選）</p>
-                    <p><strong>選項：</strong>資訊更新延遲、定位不準確、字體太小或難以閱讀、找不到想要的功能、閃退或卡頓、推送通知不及時或過多、沒有遇到問題</p>
+                    <p><strong>選項分佈：</strong>資訊更新延遲 (21.8%) / 定位不準確 (13.9%) / 字體太小難以閱讀 (12.6%) / 找不到想要的功能 (11.5%) / 閃退或卡頓 (0%) / 推送通知不及時或過多 (0%) / 沒有遇到問題 (52.6%)</p>
                         </div>
                 </details>
                 <div className="space-y-4">
@@ -759,6 +762,7 @@ function App() {
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>除了「澳門天氣」APP外，您還透過哪些渠道獲取天氣資訊？（可多選）</p>
+                    <p><strong>選項分佈：</strong>氣象局官方網站 (72.2%) / 微信服務號「澳門天氣」(33.3%) / 微信影音號「澳門天氣」(13.3%) / Instagram @smgmacau (11.8%) / 1311電話查詢 (10.2%) / Telegram頻道 (6.5%) / RSS廣播 (4.9%)</p>
                   </div>
                 </details>
                 <div className="space-y-4">
@@ -923,7 +927,7 @@ function App() {
         {/* Footer */}
         <footer className="border-t pt-8 pb-12 text-center">
           <p className="text-sm text-slate-500">
-            「澳門天氣」流動應用程式用戶意見調查分析報告
+            「澳門天氣」流動應用程式用戶意見調查分析報告（截至2026年5月19日數據）
           </p>
           <p className="text-xs text-slate-400 mt-1">
             數據收集期間：2026年4月28日至5月16日 | 有效樣本：618份

@@ -464,7 +464,6 @@ function App() {
             <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
               <p><strong>問題：</strong>請對「澳門天氣」APP在以下各方面的表現進行評分。</p>
               <p><strong>選項：</strong>1 分（非常不滿意）至 5 分（非常滿意），五級量表。</p>
-              <p><strong>有效樣本：</strong>618 份</p>
             </div>
           </details>
 
@@ -537,8 +536,7 @@ function App() {
                   <p><strong>年齡：</strong>「請問您的年齡是？」— 18歲以下 / 18-30歲 / 31-50歲 / 51歲以上</p>
                   <p><strong>使用頻率：</strong>「您使用「澳門天氣」APP的頻率是？」— 每天多次 / 每天一次 / 每週幾次 / 偶爾使用 / 第一次使用</p>
                   <p><strong>交叉維度：</strong>以上兩題分別與總體滿意度（4項平均）進行交叉分析</p>
-                  <p><strong>有效樣本：</strong>618 份</p>
-                </div>
+                    </div>
               </details>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -599,7 +597,7 @@ function App() {
             <div className="w-10 h-10 rounded-xl bg-[#4A90A4]/10 flex items-center justify-center">
               <Smartphone className="w-5 h-5 text-[#4A90A4]" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-800">用戶行為與認知分析</h2>
+            <h2 className="text-2xl font-bold text-slate-800">用戶行為分析</h2>
           </div>
 
           <Dialog>
@@ -617,7 +615,7 @@ function App() {
               </div>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[95vw]">
-              <DialogHeader><DialogTitle>用戶行為與認知分析</DialogTitle></DialogHeader>
+              <DialogHeader><DialogTitle>用戶行為分析</DialogTitle></DialogHeader>
               <ZoomableImage src={import.meta.env.BASE_URL + "charts/chart3_behavior_advantages.png"} alt="行為與認知" />
             </DialogContent>
           </Dialog>
@@ -638,8 +636,7 @@ function App() {
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>您最常使用「澳門天氣」APP查看以下哪些資訊？（可多選）</p>
-                    <p><strong>有效樣本：</strong>618 份</p>
-                  </div>
+                        </div>
                 </details>
                 <div className="space-y-3">
                   {infoTypesData.map((item) => (
@@ -662,19 +659,18 @@ function App() {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  APP認知優點
+                  APP優點
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                {/* 資料來源：APP認知優點 */}
+                {/* 資料來源：APP優點 */}
                 <details className="mb-3 group">
                   <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 transition-colors select-none">
                     📋 資料來源 — 點擊展開
                   </summary>
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>您認為「澳門天氣」APP有哪些優點？（可多選）</p>
-                    <p><strong>有效樣本：</strong>618 份</p>
-                  </div>
+                        </div>
                 </details>
                 <div className="space-y-3">
                   {advantagesData.map((item) => (
@@ -738,8 +734,7 @@ function App() {
                   <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 space-y-1">
                     <p><strong>問題：</strong>在使用「澳門天氣」APP時，您是否遇到過以下問題？（可多選）</p>
                     <p><strong>選項：</strong>資訊更新延遲、定位不準確、字體太小或難以閱讀、找不到想要的功能、閃退或卡頓、推送通知不及時或過多、沒有遇到問題</p>
-                    <p><strong>有效樣本：</strong>618 份 | 註：同時勾選具體問題及「沒有遇到問題」的10份已篩除</p>
-                  </div>
+                        </div>
                 </details>
                 <div className="space-y-4">
                   {problemsData.map((item) => (

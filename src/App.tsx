@@ -67,12 +67,13 @@ const advantagesData = [
 ];
 
 const channelsData = [
-  { channel: 'SMG官方網站', pct: 35.0, count: 216 },
-  { channel: '社交媒體（Facebook/微信）', pct: 30.0, count: 185 },
-  { channel: '電視/電台天氣報告', pct: 28.0, count: 173 },
-  { channel: '其他手機天氣APP', pct: 18.0, count: 111 },
-  { channel: '家人朋友轉告', pct: 12.0, count: 74 },
-  { channel: '報紙', pct: 5.0, count: 31 },
+  { channel: '氣象局官方網站', pct: 72.2, count: 446, type: '官方數字渠道' },
+  { channel: '微信服務號「澳門天氣」', pct: 33.3, count: 206, type: '社交媒體' },
+  { channel: '微信影音號「澳門天氣」', pct: 13.3, count: 82, type: '社交媒體' },
+  { channel: 'Instagram @smgmacau', pct: 11.8, count: 73, type: '社交媒體' },
+  { channel: '1311電話系統查詢服務', pct: 10.2, count: 63, type: '傳統服務' },
+  { channel: 'Telegram「澳門地球物理氣象局頻道」', pct: 6.5, count: 40, type: '社交媒體' },
+  { channel: 'RSS天氣訊息廣播頻道服務', pct: 4.9, count: 30, type: '訂閱服務' },
 ];
 
 const crossAnalysisData = {
@@ -765,7 +766,10 @@ function App() {
                     <div key={item.channel} className="relative">
                       <div className="flex justify-between items-center mb-1">
                         <span className="text-sm font-medium">{item.channel}</span>
-                        <span className="text-sm font-bold">{item.pct}%</span>
+                        <div className="flex items-center gap-2">
+                          <Badge variant="outline" className="text-xs">{item.type}</Badge>
+                          <span className="text-sm font-bold">{item.pct}%</span>
+                        </div>
                       </div>
                       <div className="h-6 bg-slate-100 rounded-full overflow-hidden">
                         <div 

@@ -369,9 +369,6 @@ function App() {
                   <div className="text-xs text-slate-500">間隔 &lt; 30秒</div>
                 </div>
               </div>
-              <p className="text-sm text-slate-600">
-                共 <strong>24筆</strong>（3.9%）提交間隔少於10秒，其中2026年5月6日上午出現密集短間隔提交（7筆），可能反映同一用戶批量填寫或未經細閱題目即快速勾選。這些問卷內容上未達無效標準，但其填寫質量可能較低，分析時應予以留意。
-              </p>
             </CardContent>
           </Card>
 
